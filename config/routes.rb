@@ -1,14 +1,12 @@
 # get 'welcome/index'
 # get 'welcome/about'
 
-Rails.application.routes.draw do
+Bloccit::Application.routes.draw do
 
-  get 'welcome/contact'
+  resources :posts
 
-  get 'welcome/index'
+  get 'about' => 'welcome#about'
 
-  get 'welcome/about'
-  
   root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
