@@ -3,6 +3,7 @@
 
 Bloccit::Application.routes.draw do
 
+  devise_for :users
   resources :advertisements
   
   get 'about' => 'welcome#about'
