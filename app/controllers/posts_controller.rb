@@ -1,11 +1,5 @@
 class PostsController < ApplicationController
-before_action :flash_attack
-  skip_before_action :flash_attack, only: [:edit, :show]
 
-  
-  def flash_attack
-    flash[:notice] = "action complete"
-  end
   
   def index
     @posts = Post.all
